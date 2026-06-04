@@ -1,0 +1,11 @@
+{
+  "name": "daily-vision-lab",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Daily niche vision-AI experiments — one passive ambient app per day",
+  "scripts": {
+    "dev": "npm run dev --prefix days/2026-06-04-microclimate",
+    "build": "npm run build --prefix days/2026-06-04-microclimate",
+    "preview": "npm run preview --prefix days/2026-06-04-microclimate"
+  }
+}

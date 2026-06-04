@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Microclimate — passive ambient weather from your face, on-device vision, no server."
+    />
+    <title>Microclimate · Day 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="grain" aria-hidden="true"></div>
+    <canvas id="sky" aria-hidden="true"></canvas>
+
+    <header class="top">
+      <div class="brand">
+        <span class="brand-tag">daily vision lab · day 1</span>
+        <h1>Microclimate</h1>
+        <p class="lede">
+          Sit still. Your face becomes the forecast — on-device, no uploads, no
+          typing.
+        </p>
+      </div>
+      <div class="status-panel" role="status" aria-live="polite">
+        <div class="status-row">
+          <span class="label">Inner weather</span>
+          <span id="weather-name" class="value">—</span>
+        </div>
+        <div class="status-row">
+          <span class="label">Confidence</span>
+          <span id="weather-conf" class="value mono">—</span>
+        </div>
+        <div class="meter">
+          <span class="label">Warmth</span>
+          <div class="bar"><div id="warmth-bar" class="fill warmth"></div></div>
+        </div>
+        <div class="meter">
+          <span class="label">Tension</span>
+          <div class="bar"><div id="tension-bar" class="fill tension"></div></div>
+        </div>
+        <div class="meter">
+          <span class="label">Drift</span>
+          <div class="bar"><div id="drift-bar" class="fill drift"></div></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="stage">
+      <section class="viewport" aria-label="Live camera feed">
+        <video id="video" playsinline muted autoplay></video>
+        <canvas id="overlay"></canvas>
+        <div id="loading" class="loading">
+          <div class="pulse"></div>
+          <p>Loading vision models…</p>
+          <p class="hint">First visit downloads ~6MB once, then caches.</p>
+        </div>
+        <button id="start-btn" type="button" class="cta hidden">
+          Open the observatory
+        </button>
+      </section>
+
+      <section class="oracle" aria-label="Ambient forecast cards">
+        <h2>Forecast drift</h2>
+        <p class="oracle-note">
+          Cards appear on their own. Tap one to pin a reflection — you write
+          nothing unless you want to.
+        </p>
+        <div id="card-stream" class="card-stream"></div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p>
+        Thesis: spatial agency + ambient multimodal UI (Flint 2026, OCAD). Vision
+        runs locally via MediaPipe.
+      </p>
+      <button id="privacy-btn" type="button" class="linkish">How privacy works</button>
+    </footer>
+
+    <dialog id="privacy-dialog">
+      <h3>On-device only</h3>
+      <p>
+        Your webcam frames never leave this tab. MediaPipe Face Landmarker runs in
+        your browser; mood heuristics and poetry are computed locally. No API keys,
+        no accounts.
+      </p>
+      <form method="dialog">
+        <button type="submit" class="cta small">Got it</button>
+      </form>
+    </dialog>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
