@@ -15,7 +15,11 @@ Each day:
 |------|------|------|
 | 2026-06-04 | [microclimate](./days/2026-06-04-microclimate/) | Your face → inner weather forecast (MediaPipe, on-device) |
 
-## Run today's app
+## Live demo
+
+**[Microclimate (Day 1)](https://joey114132.github.io/daily-vision-lab/)** — GitHub Pages (requires webcam; HTTPS only).
+
+## Run locally
 
 ```zsh
 cd days/2026-06-04-microclimate
