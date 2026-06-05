@@ -115,8 +115,12 @@ function applyVars(text, v) {
 const readmeTpl = fs.readFileSync(path.join(root, "templates/day-README.md"), "utf8");
 fs.writeFileSync(path.join(dest, "README.md"), applyVars(readmeTpl, vars));
 
+const testPlanTpl = fs.readFileSync(path.join(root, "templates/TEST_PLAN.md"), "utf8");
+fs.writeFileSync(path.join(dest, "TEST_PLAN.md"), applyVars(testPlanTpl, vars));
+
 execSync("npm install", { cwd: dest, stdio: "inherit" });
 execSync("npm run build", { cwd: dest, stdio: "inherit" });
+execSync(`node scripts/validate-day.mjs "${dest}"`, { cwd: root, stdio: "inherit" });
 
 progress.nextIndex = index + 1;
 progress.lastGenerated = { date, folder: folderName, index };

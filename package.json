@@ -7,6 +7,8 @@
   "scripts": {
     "generate": "node scripts/generate-next-day.mjs",
     "generate:dry": "node scripts/generate-next-day.mjs --dry-run",
+    "validate": "node scripts/validate-day.mjs",
+    "validate:latest": "node scripts/validate-day.mjs $(node scripts/resolve-latest-day.mjs --print-path)",
     "latest-day": "node scripts/resolve-latest-day.mjs"
   }
 }

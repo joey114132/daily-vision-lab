@@ -34,6 +34,9 @@ jobs:
           echo "dir=$DAY_DIR" >> "$GITHUB_OUTPUT"
           echo "Deploying: $DAY_DIR"
 
+      - name: Validate latest day
+        run: node scripts/validate-day.mjs "${{ steps.day.outputs.dir }}"
+
       - name: Build latest day
         working-directory: ${{ steps.day.outputs.dir }}
         run: |

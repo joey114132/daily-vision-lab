@@ -5,6 +5,7 @@ import {
 } from "@mediapipe/tasks-vision";
 import { STRINGS } from "./strings";
 import { applyStaticI18n, loadStrings, mountLangToggle, t } from "./shared/i18n";
+import { overlayX } from "./shared/mirror";
 import "./style.css";
 
 const TIPS = [4, 8, 12, 16, 20];
@@ -98,7 +99,7 @@ function drawHands(res: HandLandmarkerResult) {
     const points = TIPS.map((i) => hand[i]);
     ctx.beginPath();
     for (let i = 0; i < points.length; i++) {
-      const px = (1 - points[i].x) * w;
+      const px = overlayX(points[i].x, w);
       const py = points[i].y * h;
       if (i === 0) ctx.moveTo(px, py);
       else ctx.lineTo(px, py);
