@@ -68,8 +68,22 @@
       }
     },
     {
+      "slug": "focus-ledger",
+      "generator": "focus-ledger",
+      "title": { "en": "Focus Ledger", "ko": "포커스 원장" },
+      "tagline": {
+        "en": "Honest focus logging — no camera, no accounts, local only.",
+        "ko": "솔직한 포커스 기록 — 카메라 없음, 계정 없음, 로컬만."
+      },
+      "thesis": {
+        "en": "Privacy-first productivity: self-report beats surveillance (local-first UX 2026).",
+        "ko": "프라이버시 우선 생산성: 감시보다 자기 보고 (로컬 퍼스트 UX)."
+      }
+    },
+    {
       "slug": "stillness-field",
       "generator": "stillness-field",
+      "skipAuto": true,
       "title": { "en": "Stillness Field", "ko": "고요 장" },
       "tagline": {
         "en": "Motion calmness becomes a visible field around you.",

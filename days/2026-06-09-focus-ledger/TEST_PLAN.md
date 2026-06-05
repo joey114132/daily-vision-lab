@@ -1,6 +1,6 @@
-# Test plan · __TITLE_EN__ / __TITLE_KO__
+# Test plan · Focus Ledger / 포커스 원장
 
-**Date:** __DATE__ · **Day __DAY_NUM__**
+**Date:** 2026-06-09 · **Day 6**
 
 Every item must pass before merge/deploy. Mark `[x]` only with evidence.
 

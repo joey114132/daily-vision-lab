@@ -93,10 +93,27 @@ if (overlayMirrored) {
   if (!failures.some((f) => f.includes("double mirror"))) pass("Mirror lint OK");
 }
 
-// TEST_PLAN must not be all empty unchecked — require Evidence log section
+// Privacy: new apps must not use camera/mic
+const pkg = JSON.parse(fs.readFileSync(path.join(dayDir, "package.json"), "utf8"));
+const srcBlob = tsFiles.map((f) => fs.readFileSync(f, "utf8")).join("\n");
+const legacyCamera = Boolean(pkg.dependencies?.["@mediapipe/tasks-vision"]);
+if (legacyCamera) {
+  pass("Legacy camera app (pre–privacy-policy)");
+} else {
+  if (/getUserMedia|mediaDevices\.getUserMedia/.test(srcBlob)) {
+    fail("Privacy: getUserMedia found — new days must not use camera");
+  } else pass("Privacy: no camera APIs");
+  if (/@mediapipe|FaceLandmarker|HandLandmarker/.test(srcBlob)) {
+    fail("Privacy: MediaPipe found in source");
+  } else pass("Privacy: no MediaPipe");
+}
+
 const plan = fs.readFileSync(path.join(dayDir, "TEST_PLAN.md"), "utf8");
 if (!plan.includes("## Evidence log")) fail("TEST_PLAN.md missing Evidence log section");
 else pass("TEST_PLAN.md structure OK");
+if (!legacyCamera && !plan.includes("No camera")) {
+  fail("TEST_PLAN.md must include privacy / no-camera checks");
+} else if (!legacyCamera) pass("TEST_PLAN privacy section OK");
 
 console.log(`\nValidate: ${name}\n`);
 for (const p of passes) console.log(`  ✓ ${p}`);

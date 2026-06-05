@@ -66,6 +66,24 @@ if (index >= catalog.days.length) {
   index = 8;
 }
 
+function generatorUsesCamera(generatorId) {
+  const pkgPath = path.join(root, "generators", generatorId, "package.json");
+  if (!fs.existsSync(pkgPath)) return false;
+  const pkg = JSON.parse(fs.readFileSync(pkgPath, "utf8"));
+  return Boolean(pkg.dependencies?.["@mediapipe/tasks-vision"]);
+}
+
+while (index < catalog.days.length) {
+  const candidate = catalog.days[index];
+  if (!candidate.skipAuto && !generatorUsesCamera(candidate.generator)) break;
+  console.log(`Skip camera/legacy catalog index ${index}: ${candidate.slug}`);
+  index++;
+}
+if (index >= catalog.days.length) {
+  console.error("No privacy-safe generator left in catalog");
+  process.exit(1);
+}
+
 const entry = catalog.days[index];
 const folderName = `${date}-${entry.slug}`;
 const dest = path.join(daysDir, folderName);

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus Ledger · Day 6</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;600&family=Noto+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="top">
+      <div>
+        <p class="eyebrow" data-i18n="brandTag">daily vision lab</p>
+        <h1>Focus Ledger</h1>
+        <p class="ko">포커스 원장</p>
+        <p class="lede" data-i18n="lede">tagline</p>
+      </div>
+      <div id="lang-toggle" class="lang-toggle"></div>
+    </header>
+
+    <main class="layout">
+      <section class="panel now">
+        <p class="label" data-i18n="nowLabel">Now</p>
+        <p id="mode" class="mode">—</p>
+        <p id="timer" class="timer">00:00</p>
+        <div class="actions">
+          <button type="button" data-mode="focus" class="chip focus" data-i18n="btnFocus">Focus</button>
+          <button type="button" data-mode="break" class="chip break" data-i18n="btnBreak">Break</button>
+          <button type="button" data-mode="drift" class="chip drift" data-i18n="btnDrift">Drift</button>
+        </div>
+        <label class="pomo">
+          <input id="pomo" type="checkbox" />
+          <span data-i18n="pomoLabel">25 min focus blocks</span>
+        </label>
+      </section>
+
+      <section class="panel stats">
+        <h2 data-i18n="statsTitle">Today</h2>
+        <div class="row"><span data-i18n="statFocus">Focus</span><strong id="stat-focus">0m</strong></div>
+        <div class="row"><span data-i18n="statBreak">Break</span><strong id="stat-break">0m</strong></div>
+        <div class="row"><span data-i18n="statDrift">Drift taps</span><strong id="stat-drift">0</strong></div>
+        <button id="export" type="button" class="ghost" data-i18n="btnExport">Copy summary</button>
+      </section>
+
+      <section class="panel log">
+        <h2 data-i18n="logTitle">Ledger</h2>
+        <ul id="entries"></ul>
+      </section>
+    </main>
+
+    <footer data-i18n="privacyNote">privacy</footer>
+    <p id="toast" class="toast hidden" role="status"></p>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
