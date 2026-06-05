@@ -1,9 +1,9 @@
 {
-  "nextIndex": 2,
+  "nextIndex": 3,
   "note": "Index 0 = microclimate (manual). Automation starts at 1.",
   "lastGenerated": {
-    "date": "2026-06-05",
-    "folder": "2026-06-05-gesture-constellation",
-    "index": 1
+    "date": "2026-06-06",
+    "folder": "2026-06-06-blink-tide",
+    "index": 2
   }
 }
