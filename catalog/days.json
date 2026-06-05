@@ -1,0 +1,188 @@
+{
+  "version": 1,
+  "days": [
+    {
+      "slug": "microclimate",
+      "generator": "microclimate",
+      "skipAuto": true,
+      "title": { "en": "Microclimate", "ko": "마이크로클라이밋" },
+      "tagline": {
+        "en": "Sit still. Your face becomes the forecast.",
+        "ko": "가만히 앉으세요. 당신의 얼굴이 일기 예보가 됩니다."
+      },
+      "thesis": {
+        "en": "Flint 2026 spatial agency — AI scaffolds, you stay the author.",
+        "ko": "Flint 2026 공간적 주체성 — AI는 비계만, 주인공은 당신."
+      }
+    },
+    {
+      "slug": "gesture-constellation",
+      "generator": "gesture-constellation",
+      "title": { "en": "Gesture Constellation", "ko": "제스처 별자리" },
+      "tagline": {
+        "en": "Your hands draw a quiet star map — no clicks required.",
+        "ko": "손이 조용한 별자리를 그립니다 — 클릭 없이."
+      },
+      "thesis": {
+        "en": "Ambient multimodal UI: gesture as spatial artifact, not chat.",
+        "ko": "앰비언트 멀티모달 UI: 채팅이 아닌 공간적 제스처."
+      }
+    },
+    {
+      "slug": "blink-tide",
+      "generator": "blink-tide",
+      "title": { "en": "Blink Tide", "ko": "깜빡임 조수" },
+      "tagline": {
+        "en": "Each blink raises or lowers an inner sea.",
+        "ko": "깜빡일 때마다 내면의 바다가 오르내립니다."
+      },
+      "thesis": {
+        "en": "On-device fatigue signals as generative UI, not diagnosis.",
+        "ko": "온디바이스 피로 신호를 진단이 아닌 생성 UI로."
+      }
+    },
+    {
+      "slug": "stillness-field",
+      "generator": "stillness-field",
+      "title": { "en": "Stillness Field", "ko": "고요 장" },
+      "tagline": {
+        "en": "Motion calmness becomes a visible field around you.",
+        "ko": "움직임의 고요함이 당신 주변의 장으로 보입니다."
+      },
+      "thesis": {
+        "en": "Ambient computing: passive presence sensing without commands.",
+        "ko": "앰비언트 컴퓨팅: 명령 없는 패시브 존재 감지."
+      }
+    },
+    {
+      "slug": "gaze-compass",
+      "generator": "gaze-compass",
+      "title": { "en": "Gaze Compass", "ko": "시선 나침반" },
+      "tagline": {
+        "en": "Where your eyes lean, the compass needle follows.",
+        "ko": "눈이 기울은 곳으로 나침반이 따릅니다."
+      },
+      "thesis": {
+        "en": "Generative UI compass — spatial affordance from vision heuristics.",
+        "ko": "생성 UI 나침반 — 시각 휴리스틱의 공간적 단서."
+      }
+    },
+    {
+      "slug": "symmetry-lens",
+      "generator": "symmetry-lens",
+      "title": { "en": "Symmetry Lens", "ko": "대칭 렌즈" },
+      "tagline": {
+        "en": "Face balance as a living mirror — entertainment, not metrics.",
+        "ko": "얼굴 균형을 살아 있는 거울로 — 수치가 아닌 놀이."
+      },
+      "thesis": {
+        "en": "Expressive metaphor UI from landmark geometry.",
+        "ko": "랜드마크 기하에서 나온 은유적 UI."
+      }
+    },
+    {
+      "slug": "orbit-trail",
+      "generator": "orbit-trail",
+      "title": { "en": "Orbit Trail", "ko": "궤도 잔향" },
+      "tagline": {
+        "en": "Your nose tip paints orbital ghosts in the air.",
+        "ko": "코끝이 공기에 궤도의 잔상을 남깁니다."
+      },
+      "thesis": {
+        "en": "Spatial canvas trails — Flint-style externalized thought paths.",
+        "ko": "공간 캔버스 궤적 — Flint식 사고의 외재화."
+      }
+    },
+    {
+      "slug": "presence-horizon",
+      "generator": "presence-horizon",
+      "title": { "en": "Presence Horizon", "ko": "존재 지평선" },
+      "tagline": {
+        "en": "A horizon line breathes with how long you've stayed.",
+        "ko": "머문 시간에 맞춰 지평선이 숨 쉽니다."
+      },
+      "thesis": {
+        "en": "Time + vision ambient display — no interaction loop.",
+        "ko": "시간+비전 앰비언트 디스플레이 — 상호작용 루프 없음."
+      }
+    },
+    {
+      "slug": "microclimate",
+      "generator": "microclimate",
+      "title": { "en": "Microclimate II", "ko": "마이크로클라이밋 II" },
+      "tagline": {
+        "en": "Return visit — inner weather, new oracle lines.",
+        "ko": "재방문 — 새로운 내면 날씨와 예보."
+      },
+      "thesis": {
+        "en": "Iterative ambient apps — same engine, evolving poetry pool.",
+        "ko": "반복 가능한 앰비언트 앱 — 같은 엔진, 다른 시적 풀."
+      }
+    },
+    {
+      "slug": "gesture-constellation",
+      "generator": "gesture-constellation",
+      "title": { "en": "Gesture Constellation II", "ko": "제스처 별자리 II" },
+      "tagline": {
+        "en": "Deeper sky — two-hand stellar weaving.",
+        "ko": "더 깊은 하늘 — 두 손의 별 엮기."
+      },
+      "thesis": {
+        "en": "Multimodal co-presence on canvas (Saorsa-style intent UI).",
+        "ko": "캔버스 위 멀티모달 공존 (Saorsa식 의도 UI)."
+      }
+    },
+    {
+      "slug": "blink-tide",
+      "generator": "blink-tide",
+      "title": { "en": "Blink Tide II", "ko": "깜빡임 조수 II" },
+      "tagline": {
+        "en": "Lunar tide mode — slower, dreamier water.",
+        "ko": "달 조수 모드 — 더 느리고 몽환적인 물."
+      },
+      "thesis": {
+        "en": "Rhythm from biological micro-events as UI driver.",
+        "ko": "생체 미세 리듬을 UI 드라이버로."
+      }
+    },
+    {
+      "slug": "stillness-field",
+      "generator": "stillness-field",
+      "title": { "en": "Stillness Field II", "ko": "고요 장 II" },
+      "tagline": {
+        "en": "Sharper ripples when you almost move.",
+        "ko": "움직이기 직전, 더 선명한 잔물결."
+      },
+      "thesis": {
+        "en": "Edge computing vision — all inference local.",
+        "ko": "엣지 비전 — 모든 추론 로컬."
+      }
+    },
+    {
+      "slug": "gaze-compass",
+      "generator": "gaze-compass",
+      "title": { "en": "Gaze Compass II", "ko": "시선 나침반 II" },
+      "tagline": {
+        "en": "Cardinal moods from iris lean.",
+        "ko": "홍채 기울기에서 나온 방위 감정."
+      },
+      "thesis": {
+        "en": "Omnimodal ambient signals synthesized in-browser.",
+        "ko": "브라우저 내 옴니모달 앰비언트 신호 합성."
+      }
+    },
+    {
+      "slug": "orbit-trail",
+      "generator": "orbit-trail",
+      "title": { "en": "Orbit Trail II", "ko": "궤도 잔향 II" },
+      "tagline": {
+        "en": "Long-exposure soul path for still sitters.",
+        "ko": "가만히 앉은 이를 위한 장노출 영혼 경로."
+      },
+      "thesis": {
+        "en": "PMX-style spatial curation without an agent server.",
+        "ko": "에이전트 서버 없는 PMX식 공간 큐레이션."
+      }
+    }
+  ]
+}

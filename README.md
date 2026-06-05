@@ -1,40 +1,37 @@
-# Daily Vision Lab
+# Daily Vision Lab / 데일리 비전 랩
 
-One **niche, passive, vision-AI** web experiment per day — built for people who want something entertaining without physical input, with a real GitHub commit streak.
+**EN:** One niche, passive, vision-AI web experiment per day — bilingual (KO/EN), automated via GitHub Actions.  
+**KO:** 매일 하나씩 — 한영 지원, 패시브 비전 AI 실험. GitHub Actions로 자동 생성·배포.
 
-Each day:
+## Live demo / 라이브 데모
 
-1. **Thesis scan** — latest research/industry patterns (ambient multimodal UI, on-device vision, generative UI, agent canvases).
-2. **One shippable app** — browser-first when possible (privacy, zero install).
-3. **UI/UX polish** — intentional aesthetic, not template slop.
-4. **Commit** — `days/YYYY-MM-DD-<slug>/` + root README update.
+**[Latest app on GitHub Pages](https://joey114132.github.io/daily-vision-lab/)** — webcam + HTTPS required.
 
-## Days
+## Days / 일차 목록
 
-| Date | Slug | Idea |
-|------|------|------|
-| 2026-06-04 | [microclimate](./days/2026-06-04-microclimate/) | Your face → inner weather forecast (MediaPipe, on-device) |
+<!-- DAYS_TABLE_START -->
+| Date | Folder | Title EN / KO |
+|------|--------|----------------|
+| 2026-06-04 | [microclimate](./days/2026-06-04-microclimate/) | Microclimate / 마이크로클라이밋 |
+| 2026-06-05 | [gesture-constellation](./days/2026-06-05-gesture-constellation/) | Gesture Constellation / 제스처 별자리 |
+<!-- DAYS_TABLE_END -->
 
-## Live demo
-
-**[Microclimate (Day 1)](https://joey114132.github.io/daily-vision-lab/)** — GitHub Pages (requires webcam; HTTPS only).
-
-## Run locally
+## Run today's app / 오늘 앱 실행
 
 ```zsh
-cd days/2026-06-04-microclimate
+cd days/2026-06-05-gesture-constellation
 npm install
 npm run dev
 ```
 
-Open the URL shown (default port **5174**). Use Chrome or Edge for best GPU delegate support.
+Open **http://localhost:5174** · Chrome/Edge recommended.
+
+## Automation / 자동화
+
+- **Daily cron:** `00:00 KST` — `.github/workflows/daily-automation.yml` builds the next catalog app, commits, pushes.
+- **Deploy:** every push to `main` deploys the **latest** `days/*` folder to Pages.
+- **Manual:** `npm run generate` or `node scripts/generate-next-day.mjs`
 
 ## Requirements
 
-- Webcam
-- Modern Chromium browser recommended
-- No API keys, no backend
-
-## License
-
-MIT — each day may add its own `LICENSE` if needed.
+- Webcam · Modern Chromium · No API keys · All inference on-device

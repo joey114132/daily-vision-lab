@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>__TITLE_EN__ · Day __DAY_NUM__</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=Noto+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <canvas id="sky"></canvas>
+    <header class="top">
+      <div>
+        <span class="tag" data-i18n="brandTag">daily vision lab</span>
+        <h1>__TITLE_EN__</h1>
+        <p class="ko-title">__TITLE_KO__</p>
+        <p class="lede" data-i18n="lede">tagline</p>
+      </div>
+      <div class="panel">
+        <div id="lang-toggle" class="lang-toggle"></div>
+        <p><span data-i18n="starsLabel">Stars traced</span>: <strong id="star-count">0</strong></p>
+        <p><span data-i18n="handsLabel">Hands</span>: <strong id="hand-count">0</strong></p>
+      </div>
+    </header>
+    <main>
+      <div class="viewport">
+        <video id="video" playsinline muted autoplay></video>
+        <canvas id="overlay"></canvas>
+        <div id="loading" class="loading hidden">
+          <p data-i18n="loading">Loading…</p>
+        </div>
+        <button id="start" type="button" class="cta" data-i18n="cta">Start</button>
+      </div>
+      <aside class="log" id="log" aria-live="polite"></aside>
+    </main>
+    <footer>
+      <p data-i18n="thesisFoot">thesis</p>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

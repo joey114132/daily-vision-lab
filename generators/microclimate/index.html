@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="__TITLE_EN__ / __TITLE_KO__" />
+    <title>__TITLE_EN__ · Day __DAY_NUM__</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="grain" aria-hidden="true"></div>
+    <canvas id="sky" aria-hidden="true"></canvas>
+
+    <header class="top">
+      <div class="brand">
+        <div class="brand-row">
+          <span class="brand-tag" data-i18n="brandTag">daily vision lab</span>
+          <div id="lang-toggle" class="lang-toggle"></div>
+        </div>
+        <h1>__TITLE_EN__</h1>
+        <p class="ko-title">__TITLE_KO__</p>
+        <p class="lede" data-i18n="lede">tagline</p>
+      </div>
+      <div class="status-panel" role="status" aria-live="polite">
+        <div class="status-row">
+          <span class="label" data-i18n="innerWeather">Inner weather</span>
+          <span id="weather-name" class="value">—</span>
+        </div>
+        <div class="status-row">
+          <span class="label" data-i18n="confidence">Confidence</span>
+          <span id="weather-conf" class="value mono">—</span>
+        </div>
+        <div class="meter">
+          <span class="label" data-i18n="warmth">Warmth</span>
+          <div class="bar"><div id="warmth-bar" class="fill warmth"></div></div>
+        </div>
+        <div class="meter">
+          <span class="label" data-i18n="tension">Tension</span>
+          <div class="bar"><div id="tension-bar" class="fill tension"></div></div>
+        </div>
+        <div class="meter">
+          <span class="label" data-i18n="drift">Drift</span>
+          <div class="bar"><div id="drift-bar" class="fill drift"></div></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="stage">
+      <section class="viewport" aria-label="Live camera feed">
+        <video id="video" playsinline muted autoplay></video>
+        <canvas id="overlay"></canvas>
+        <div id="loading" class="loading">
+          <div class="pulse"></div>
+          <p data-i18n="loading">Loading…</p>
+          <p class="hint" data-i18n="loadingHint">hint</p>
+        </div>
+        <button id="start-btn" type="button" class="cta hidden" data-i18n="cta">Open</button>
+      </section>
+
+      <section class="oracle" aria-label="Ambient forecast cards">
+        <h2 data-i18n="forecastDrift">Forecast drift</h2>
+        <p class="oracle-note" data-i18n="oracleNote">note</p>
+        <div id="card-stream" class="card-stream"></div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p data-i18n="thesisFoot">thesis</p>
+      <button id="privacy-btn" type="button" class="linkish" data-i18n="privacyBtn">Privacy</button>
+    </footer>
+
+    <dialog id="privacy-dialog">
+      <h3 data-i18n="privacyTitle">Privacy</h3>
+      <p data-i18n="privacyBody">body</p>
+      <form method="dialog">
+        <button type="submit" class="cta small" data-i18n="privacyOk">OK</button>
+      </form>
+    </dialog>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

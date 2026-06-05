@@ -1,11 +1,12 @@
 {
   "name": "daily-vision-lab",
   "private": true,
-  "version": "0.1.0",
-  "description": "Daily niche vision-AI experiments — one passive ambient app per day",
+  "version": "0.2.0",
+  "description": "Daily niche vision-AI experiments — bilingual, automated",
+  "type": "module",
   "scripts": {
-    "dev": "npm run dev --prefix days/2026-06-04-microclimate",
-    "build": "npm run build --prefix days/2026-06-04-microclimate",
-    "preview": "npm run preview --prefix days/2026-06-04-microclimate"
+    "generate": "node scripts/generate-next-day.mjs",
+    "generate:dry": "node scripts/generate-next-day.mjs --dry-run",
+    "latest-day": "node scripts/resolve-latest-day.mjs"
   }
 }

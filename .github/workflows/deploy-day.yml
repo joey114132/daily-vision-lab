@@ -26,11 +26,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-          cache: npm
-          cache-dependency-path: days/2026-06-04-microclimate/package-lock.json
 
-      - name: Build Microclimate
-        working-directory: days/2026-06-04-microclimate
+      - name: Resolve latest day folder
+        id: day
+        run: |
+          DAY_DIR=$(node scripts/resolve-latest-day.mjs --print-path)
+          echo "dir=$DAY_DIR" >> "$GITHUB_OUTPUT"
+          echo "Deploying: $DAY_DIR"
+
+      - name: Build latest day
+        working-directory: ${{ steps.day.outputs.dir }}
         run: |
           npm ci
           npm run build
@@ -39,7 +44,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: days/2026-06-04-microclimate/dist
+          path: ${{ steps.day.outputs.dir }}/dist
 
       - id: deployment
         uses: actions/deploy-pages@v4
