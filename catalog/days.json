@@ -55,6 +55,19 @@
       }
     },
     {
+      "slug": "desk-well",
+      "generator": "desk-well",
+      "title": { "en": "DeskWell", "ko": "데스크웰" },
+      "tagline": {
+        "en": "Calibrated desk wellness — lean, blink rate, and 20-20-20 breaks.",
+        "ko": "교정 기반 데스크 웰니스 — 거리·깜빡임·20-20-20 휴식."
+      },
+      "thesis": {
+        "en": "SitCoach/PosturePlus pattern: temporal drift alerts, 100% on-device (JMIR FHP 2024, Ergonomiq 20-20-20).",
+        "ko": "SitCoach/PosturePlus 패턴: 지속 이탈 알림, 온디바이스 100% (JMIR FHP 2024)."
+      }
+    },
+    {
       "slug": "stillness-field",
       "generator": "stillness-field",
       "title": { "en": "Stillness Field", "ko": "고요 장" },

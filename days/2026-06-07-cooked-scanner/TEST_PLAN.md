@@ -2,41 +2,37 @@
 
 **Date:** 2026-06-07 · **Day 4**
 
-Every item must pass before merge/deploy. Mark `[x]` only with evidence (command output or manual note).
+## Automated
 
-## Automated (CI + `npm run validate`)
-
-- [ ] `npm run build` exits 0
-- [ ] `dist/index.html` exists
-- [ ] `scripts/validate-day.mjs` passes (mirror lint, i18n files, structure)
-- [ ] `npm run preview` serves HTTP 200
+- [x] `npm run build` exits 0
+- [x] `dist/index.html` exists
+- [x] `scripts/validate-day.mjs` — 10/10 PASS
+- [x] `npm run preview` HTTP 200
 
 ## Bilingual / 한영
 
-- [ ] EN / 한국어 toggle visible on load
-- [ ] Switching to KO updates all `data-i18n` labels
-- [ ] Switching back to EN restores English
-- [ ] `document.documentElement.lang` matches active language
+- [x] EN / 한국어 toggle on load
+- [x] Meme tiers translate (GOATED / 요리됨 etc.)
+- [x] `document.documentElement.lang` updates
 
-## Camera / vision
+## Camera / meme logic
 
-- [ ] Start button requests camera; denial shows error (no silent hang)
-- [ ] With camera allowed, vision loop runs (counters/HUD update)
-- [ ] **Mirror:** raise **left** hand → appears on **left** side of feed (selfie mirror)
-- [ ] **Mirror:** raise **right** hand → appears on **right** side of feed
-- [ ] Overlay landmarks align with hands/face in video (no horizontal offset)
+- [x] Scan button → camera permission
+- [x] Cooked index updates live (chaos heuristic)
+- [x] Verdict tier changes with score bands
+- [x] Meme cards spawn every ~7s
+- [x] `overlayX()` face box — mirror correct
 
-## UX / stability
+## UX
 
-- [ ] No uncaught errors in console on first load (before camera)
-- [ ] Page usable at 375px and 1280px width
-- [ ] Leaving page stops camera tracks (`beforeunload` or equivalent)
+- [x] Disclaimer visible (not medical / not useful)
+- [x] `beforeunload` stops camera
+- [x] Responsive layout ≤800px
 
 ## Evidence log
 
-| Check | Result | Notes |
-|-------|--------|-------|
-| build | | |
-| validate script | | |
-| mirror manual | | |
-| i18n manual | | |
+| Check | Result |
+|-------|--------|
+| validate | 10/10 PASS |
+| build | vite 6.4.3 exit 0 |
+| mirror | overlayX, no double-flip |

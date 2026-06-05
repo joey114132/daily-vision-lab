@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeskWell · Day 5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;600;700&family=Noto+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="top">
+      <div>
+        <p class="eyebrow" data-i18n="brandTag">daily vision lab</p>
+        <h1>DeskWell</h1>
+        <p class="ko">데스크웰</p>
+        <p class="lede" data-i18n="lede">tagline</p>
+      </div>
+      <div id="lang-toggle" class="lang-toggle"></div>
+    </header>
+
+    <main class="grid">
+      <section class="camera card">
+        <div class="viewport">
+          <video id="video" playsinline muted autoplay></video>
+          <canvas id="overlay"></canvas>
+          <div id="loading" class="loading hidden"><p data-i18n="loading">…</p></div>
+          <button id="start" type="button" class="primary" data-i18n="ctaStart">Start</button>
+          <button id="calibrate" type="button" class="secondary hidden" data-i18n="ctaCalibrate">Calibrate</button>
+        </div>
+      </section>
+
+      <section class="metrics card">
+        <h2 data-i18n="metricsTitle">Live metrics</h2>
+        <div class="metric">
+          <span data-i18n="wellnessLabel">Wellness</span>
+          <strong id="wellness">—</strong>
+        </div>
+        <div class="metric">
+          <span data-i18n="leanLabel">Lean index</span>
+          <strong id="lean">—</strong>
+        </div>
+        <div class="metric">
+          <span data-i18n="blinkLabel">Blink / min</span>
+          <strong id="blink-rate">—</strong>
+        </div>
+        <div class="metric">
+          <span data-i18n="sessionLabel">Session</span>
+          <strong id="session-time">0:00</strong>
+        </div>
+        <div class="bar"><div id="wellness-bar"></div></div>
+        <p id="status" class="status ok" data-i18n="statusIdle">idle</p>
+      </section>
+
+      <section class="breaks card">
+        <h2 data-i18n="breaksTitle">20-20-20</h2>
+        <p class="hint" data-i18n="breaksHint">Every 20 min, look 20 feet away for 20 seconds.</p>
+        <p class="timer" id="break-timer">20:00</p>
+        <button id="break-done" type="button" class="primary small hidden" data-i18n="breakDone">Done</button>
+        <p><span data-i18n="breaksTaken">Breaks taken</span>: <strong id="breaks-count">0</strong></p>
+      </section>
+
+      <section class="log card" id="nudges" aria-live="polite"></section>
+    </main>
+
+    <footer data-i18n="privacyNote">privacy</footer>
+    <dialog id="break-dialog">
+      <h3 data-i18n="breakTitle">Eye break</h3>
+      <p data-i18n="breakBody">Look far away for 20 seconds.</p>
+      <form method="dialog">
+        <button type="submit" class="primary" data-i18n="breakDone">Done</button>
+      </form>
+    </dialog>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
