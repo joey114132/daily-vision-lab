@@ -1,11 +1,11 @@
 # Daily Vision Lab / 데일리 비전 랩
 
-**EN:** One niche vision-AI web app per day — **useful, productive, on-device**. Bilingual (KO/EN), automated via GitHub Actions.  
-**KO:** 매일 하나 — **실용·생산성** 중심, 온디바이스 비전 AI. 한영 지원, 자동 생성·배포.
+**EN:** One niche web app per day — **useful, productive, privacy-first** (no camera). Bilingual (KO/EN), automated via GitHub Actions.  
+**KO:** 매일 하나 — **실용·생산성**, **카메라 없음** 프라이버시 우선. 한영 지원, 자동 생성·배포.
 
 ## Live demo / 라이브 데모
 
-**[Latest app on GitHub Pages](https://joey114132.github.io/daily-vision-lab/)** — webcam + HTTPS required.
+**[Latest app on GitHub Pages](https://joey114132.github.io/daily-vision-lab/)** — no permissions required.
 
 ## Days / 일차 목록
 
@@ -18,12 +18,13 @@
 | 2026-06-07 | [cooked-scanner](./days/2026-06-07-cooked-scanner/) | Cooked Scanner / 요리됨 스캐너 |
 | 2026-06-08 | [desk-well](./days/2026-06-08-desk-well/) | DeskWell / 데스크웰 |
 | 2026-06-09 | [focus-ledger](./days/2026-06-09-focus-ledger/) | Focus Ledger / 포커스 원장 |
+| 2026-06-10 | [margin-notes](./days/2026-06-10-margin-notes/) | Margin Notes / 여백 메모 |
 <!-- DAYS_TABLE_END -->
 
 ## Run today's app / 오늘 앱 실행
 
 ```zsh
-cd days/2026-06-08-desk-well
+cd days/2026-06-09-focus-ledger
 npm install
 npm run dev
 ```
@@ -38,4 +39,4 @@ Open **http://localhost:5174** · Chrome/Edge recommended.
 
 ## Requirements
 
-- Webcam · Modern Chromium · No API keys · All inference on-device
+- No camera · No API keys · Data stays in your browser

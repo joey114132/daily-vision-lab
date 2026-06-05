@@ -14,6 +14,7 @@ export const STRINGS: I18nDict = {
   statDrift: { en: "Drift taps", ko: "이탈 기록" },
   btnExport: { en: "Copy day summary", ko: "하루 요약 복사" },
   logTitle: { en: "Ledger", ko: "원장" },
+  privacyShort: { en: "Local only · No camera", ko: "로컬만 · 카메라 없음" },
   privacyNote: {
     en: "No camera. No account. Data stays in your browser only.",
     ko: "카메라 없음. 계정 없음. 데이터는 브라우저에만 저장됩니다.",
@@ -24,4 +25,5 @@ export const STRINGS: I18nDict = {
   modeIdle: { en: "Pick a mode", ko: "모드를 선택하세요" },
   copied: { en: "Summary copied", ko: "요약 복사됨" },
   pomoDone: { en: "25 min focus block done", ko: "25분 집중 블록 완료" },
+  emptyLedger: { en: "No entries yet — tap a mode.", ko: "기록 없음 — 모드를 눌러 시작하세요." },
 };

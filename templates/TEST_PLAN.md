@@ -25,6 +25,14 @@ Every item must pass before merge/deploy. Mark `[x]` only with evidence.
 - [ ] Switching back to EN restores English
 - [ ] `document.documentElement.lang` matches active language
 
+## Design / 디자인
+
+- [ ] `DESIGN.md` filled; frontend-design skill applied
+- [ ] Distinctive typography (not Inter/Roboto defaults)
+- [ ] One memorable visual detail (texture, stamp, ring, etc.)
+- [ ] Hover/active/empty states polished
+- [ ] `prefers-reduced-motion` respected
+
 ## Functional / UX
 
 - [ ] Core feature works without login or API keys

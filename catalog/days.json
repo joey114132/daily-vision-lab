@@ -81,6 +81,19 @@
       }
     },
     {
+      "slug": "margin-notes",
+      "generator": "margin-notes",
+      "title": { "en": "Margin Notes", "ko": "여백 메모" },
+      "tagline": {
+        "en": "Park the urge before you switch — one line, local only.",
+        "ko": "탭을 바꾸기 전에 욕구를 적어두세요 — 한 줄, 로컬만."
+      },
+      "thesis": {
+        "en": "Implementation intentions beat willpower — capture distractions as margin notes, not guilt (Gollwitzer 1999, local-first UX).",
+        "ko": "의지력보다 실행 의도 — 죄책감 대신 여백 메모로 산만함을 적어둡니다 (Gollwitzer 1999)."
+      }
+    },
+    {
       "slug": "stillness-field",
       "generator": "stillness-field",
       "skipAuto": true,

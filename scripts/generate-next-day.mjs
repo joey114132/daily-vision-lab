@@ -136,6 +136,11 @@ fs.writeFileSync(path.join(dest, "README.md"), applyVars(readmeTpl, vars));
 const testPlanTpl = fs.readFileSync(path.join(root, "templates/TEST_PLAN.md"), "utf8");
 fs.writeFileSync(path.join(dest, "TEST_PLAN.md"), applyVars(testPlanTpl, vars));
 
+const designTpl = path.join(root, "templates/DESIGN.md");
+if (fs.existsSync(designTpl)) {
+  fs.writeFileSync(path.join(dest, "DESIGN.md"), applyVars(fs.readFileSync(designTpl, "utf8"), vars));
+}
+
 execSync("npm install", { cwd: dest, stdio: "inherit" });
 execSync("npm run build", { cwd: dest, stdio: "inherit" });
 execSync(`node scripts/validate-day.mjs "${dest}"`, { cwd: root, stdio: "inherit" });

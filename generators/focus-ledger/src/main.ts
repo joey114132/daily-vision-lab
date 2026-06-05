@@ -16,6 +16,7 @@ applyStaticI18n();
 
 const modeEl = document.getElementById("mode") as HTMLElement;
 const timerEl = document.getElementById("timer") as HTMLElement;
+const ringProgress = document.getElementById("ring-progress") as unknown as SVGCircleElement;
 const statFocus = document.getElementById("stat-focus") as HTMLElement;
 const statBreak = document.getElementById("stat-break") as HTMLElement;
 const statDrift = document.getElementById("stat-drift") as HTMLElement;
@@ -23,13 +24,19 @@ const entriesEl = document.getElementById("entries") as HTMLUListElement;
 const exportBtn = document.getElementById("export") as HTMLButtonElement;
 const pomoEl = document.getElementById("pomo") as HTMLInputElement;
 const toast = document.getElementById("toast") as HTMLElement;
+const chips = document.querySelectorAll<HTMLButtonElement>("[data-mode]");
+
+const RING_LEN = 2 * Math.PI * 54;
 
 let state: DayState = loadDay();
 let current: Mode | null = state.entries.at(-1)?.mode ?? null;
 let blockStart = state.entries.at(-1)?.at ?? Date.now();
 let pomoEnd = 0;
 
-document.querySelectorAll<HTMLButtonElement>("[data-mode]").forEach((btn) => {
+ringProgress.style.strokeDasharray = `${RING_LEN}`;
+ringProgress.style.strokeDashoffset = `${RING_LEN}`;
+
+chips.forEach((btn) => {
   btn.addEventListener("click", () => switchMode(btn.dataset.mode as Mode));
 });
 
@@ -78,29 +85,55 @@ function formatTimer(ms: number): string {
   return `${String(m).padStart(2, "0")}:${String(r).padStart(2, "0")}`;
 }
 
+function setActiveChip() {
+  chips.forEach((b) => b.classList.toggle("active", b.dataset.mode === current));
+  document.body.dataset.mode = current ?? "idle";
+}
+
 function render() {
   modeEl.textContent = modeLabel(current);
   statFocus.textContent = `${minutesInMode(state, "focus")}m`;
   statBreak.textContent = `${minutesInMode(state, "break")}m`;
   statDrift.textContent = String(state.driftTaps);
+  setActiveChip();
 
   entriesEl.innerHTML = "";
-  for (const e of [...state.entries].reverse().slice(0, 12)) {
+  const recent = [...state.entries].reverse().slice(0, 14);
+  if (recent.length === 0) {
     const li = document.createElement("li");
-    li.textContent = `${new Date(e.at).toLocaleTimeString()} · ${modeLabel(e.mode)}`;
+    li.className = "empty";
+    li.textContent = t("emptyLedger");
     entriesEl.append(li);
+    return;
   }
+  recent.forEach((e, i) => {
+    const li = document.createElement("li");
+    li.style.animationDelay = `${i * 40}ms`;
+    li.innerHTML = `<span class="dot ${e.mode}"></span><time>${new Date(e.at).toLocaleTimeString()}</time><span class="entry-mode">${modeLabel(e.mode)}</span>`;
+    entriesEl.append(li);
+  });
 }
 
 function showToast(key: keyof typeof STRINGS) {
   toast.textContent = t(key);
   toast.classList.remove("hidden");
-  setTimeout(() => toast.classList.add("hidden"), 2000);
+  setTimeout(() => toast.classList.add("hidden"), 2200);
 }
 
 function tick() {
   const now = Date.now();
-  timerEl.textContent = formatTimer(now - blockStart);
+  const elapsed = now - blockStart;
+  timerEl.textContent = formatTimer(elapsed);
+
+  if (pomoEnd && current === "focus") {
+    const total = 25 * 60 * 1000;
+    const left = Math.max(0, pomoEnd - now);
+    const pct = 1 - left / total;
+    ringProgress.style.strokeDashoffset = `${RING_LEN * (1 - pct)}`;
+  } else {
+    ringProgress.style.strokeDashoffset = `${RING_LEN}`;
+  }
+
   if (pomoEnd && now >= pomoEnd && current === "focus") {
     pomoEnd = 0;
     showToast("pomoDone");

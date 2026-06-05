@@ -17,12 +17,23 @@ Legacy camera days (`microclimate`, `gesture-constellation`, etc.) stay in repo 
 3. Every TEST_PLAN checkbox `[x]` with evidence
 4. CI validates on generate and deploy
 
+## Design & skills (required)
+
+Before coding each day:
+
+1. **Superpowers** — `using-superpowers` → relevant skills in order.
+2. **frontend-design** — pick bold aesthetic direction; fill `templates/DESIGN.md` → day folder.
+3. **verification-before-completion** — validate + TEST_PLAN evidence before ship.
+
+No generic AI UI. Every app needs one memorable design detail.
+
 ## Every new day
 
 1. Thesis scan (privacy-preserving productivity / local-first UX).
-2. `npm run generate` or scaffold `generators/<slug>/` without MediaPipe.
-3. Manual: EN/KO, core flow, refresh persistence.
-4. Commit (Korean) and push.
+2. Read **frontend-design** skill; write DESIGN.md for the day.
+3. `npm run generate` or scaffold `generators/<slug>/` without MediaPipe.
+4. Manual: EN/KO, core flow, refresh persistence, visual QA at 375px + 1280px.
+5. Commit (Korean) and push.
 
 ## App direction
 

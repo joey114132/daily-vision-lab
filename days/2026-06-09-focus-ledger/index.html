@@ -3,30 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Focus Ledger — privacy-first focus logging" />
     <title>Focus Ledger · Day 6</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;600&family=Noto+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Noto+Sans+KR:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body>
-    <header class="top">
-      <div>
+  <body data-mode="idle">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="margin-line" aria-hidden="true"></div>
+
+    <header class="top reveal">
+      <div class="title-block">
         <p class="eyebrow" data-i18n="brandTag">daily vision lab</p>
         <h1>Focus Ledger</h1>
         <p class="ko">포커스 원장</p>
         <p class="lede" data-i18n="lede">tagline</p>
       </div>
-      <div id="lang-toggle" class="lang-toggle"></div>
+      <div class="header-tools">
+        <div id="lang-toggle" class="lang-toggle"></div>
+        <p class="stamp" data-i18n="privacyShort">local only</p>
+      </div>
     </header>
 
     <main class="layout">
-      <section class="panel now">
-        <p class="label" data-i18n="nowLabel">Now</p>
+      <section class="panel now reveal" style="--d: 0.08s">
+        <span class="panel-index">01</span>
+        <p class="label" data-i18n="nowLabel">Current block</p>
+        <div class="timer-wrap">
+          <svg class="timer-ring" viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="ring-bg" cx="60" cy="60" r="54" />
+            <circle id="ring-progress" class="ring-fg" cx="60" cy="60" r="54" />
+          </svg>
+          <p id="timer" class="timer">00:00</p>
+        </div>
         <p id="mode" class="mode">—</p>
-        <p id="timer" class="timer">00:00</p>
         <div class="actions">
           <button type="button" data-mode="focus" class="chip focus" data-i18n="btnFocus">Focus</button>
           <button type="button" data-mode="break" class="chip break" data-i18n="btnBreak">Break</button>
@@ -34,25 +48,39 @@
         </div>
         <label class="pomo">
           <input id="pomo" type="checkbox" />
+          <span class="check"></span>
           <span data-i18n="pomoLabel">25 min focus blocks</span>
         </label>
       </section>
 
-      <section class="panel stats">
+      <section class="panel stats reveal" style="--d: 0.16s">
+        <span class="panel-index">02</span>
         <h2 data-i18n="statsTitle">Today</h2>
-        <div class="row"><span data-i18n="statFocus">Focus</span><strong id="stat-focus">0m</strong></div>
-        <div class="row"><span data-i18n="statBreak">Break</span><strong id="stat-break">0m</strong></div>
-        <div class="row"><span data-i18n="statDrift">Drift taps</span><strong id="stat-drift">0</strong></div>
+        <div class="stat-grid">
+          <article class="stat-card focus-stat">
+            <span data-i18n="statFocus">Focus</span>
+            <strong id="stat-focus">0m</strong>
+          </article>
+          <article class="stat-card break-stat">
+            <span data-i18n="statBreak">Break</span>
+            <strong id="stat-break">0m</strong>
+          </article>
+          <article class="stat-card drift-stat">
+            <span data-i18n="statDrift">Drift</span>
+            <strong id="stat-drift">0</strong>
+          </article>
+        </div>
         <button id="export" type="button" class="ghost" data-i18n="btnExport">Copy summary</button>
       </section>
 
-      <section class="panel log">
+      <section class="panel log reveal" style="--d: 0.24s">
+        <span class="panel-index">03</span>
         <h2 data-i18n="logTitle">Ledger</h2>
-        <ul id="entries"></ul>
+        <ul id="entries" class="ledger"></ul>
       </section>
     </main>
 
-    <footer data-i18n="privacyNote">privacy</footer>
+    <footer class="reveal" style="--d: 0.32s" data-i18n="privacyNote">privacy</footer>
     <p id="toast" class="toast hidden" role="status"></p>
     <script type="module" src="/src/main.ts"></script>
   </body>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="__TITLE_EN__ — park urges before you switch tabs" />
+    <title>__TITLE_EN__ · Day __DAY_NUM__</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Sometype+Mono:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="thermal-glow" aria-hidden="true"></div>
+    <div class="register-grid" aria-hidden="true"></div>
+
+    <header class="masthead reveal">
+      <div class="masthead-left">
+        <p class="eyebrow" data-i18n="brandTag">daily vision lab</p>
+        <h1>__TITLE_EN__</h1>
+        <p class="ko">__TITLE_KO__</p>
+        <p class="lede" data-i18n="lede">tagline</p>
+      </div>
+      <div class="masthead-right">
+        <div id="lang-toggle" class="lang-toggle"></div>
+        <p class="stamp" data-i18n="privacyShort">local only</p>
+      </div>
+    </header>
+
+    <main class="stage">
+      <section class="capture reveal" style="--d: 0.06s">
+        <div class="perforation top" aria-hidden="true"></div>
+        <form id="capture-form" class="capture-form">
+          <label for="urge-input" class="capture-label" data-i18n="captureLabel">What pulled you away?</label>
+          <div class="input-row">
+            <input
+              id="urge-input"
+              type="text"
+              maxlength="120"
+              autocomplete="off"
+              data-i18n-placeholder="capturePlaceholder"
+              placeholder="One line"
+            />
+            <button type="submit" class="print-btn" data-i18n="btnCapture">Park urge</button>
+          </div>
+        </form>
+        <div class="perforation bottom" aria-hidden="true"></div>
+      </section>
+
+      <aside class="stats reveal" style="--d: 0.12s">
+        <h2 data-i18n="statsTitle">Today's margin</h2>
+        <div class="stat-trio">
+          <article class="stat">
+            <span data-i18n="statActive">Open</span>
+            <strong id="stat-active">0</strong>
+          </article>
+          <article class="stat">
+            <span data-i18n="statParked">Parked</span>
+            <strong id="stat-parked">0</strong>
+          </article>
+          <article class="stat accent">
+            <span data-i18n="statTotal">Captured</span>
+            <strong id="stat-total">0</strong>
+          </article>
+        </div>
+        <button id="export" type="button" class="ghost" data-i18n="btnExport">Copy stack</button>
+      </aside>
+
+      <section class="stack reveal" style="--d: 0.18s">
+        <div class="stack-head">
+          <h2 data-i18n="listTitle">Receipt stack</h2>
+          <span id="stack-count" class="stack-count">0</span>
+        </div>
+        <ul id="notes" class="notes"></ul>
+      </section>
+    </main>
+
+    <footer class="reveal" style="--d: 0.26s" data-i18n="privacyNote">privacy</footer>
+    <p id="toast" class="toast hidden" role="status"></p>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
