@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>__TITLE_EN__ · Day __DAY_NUM__</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Sans+KR:wght@500;700;900&family=IBM+Plex+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="scanlines" aria-hidden="true"></div>
+    <header>
+      <span class="badge" data-i18n="badge">UNNECESSARY LAB</span>
+      <h1>__TITLE_EN__</h1>
+      <p class="ko">__TITLE_KO__</p>
+      <p class="sub" data-i18n="lede">tagline</p>
+      <div id="lang-toggle" class="lang-toggle"></div>
+    </header>
+
+    <main>
+      <section class="scan-box">
+        <div class="viewport">
+          <video id="video" playsinline muted autoplay></video>
+          <canvas id="overlay"></canvas>
+          <div id="loading" class="loading hidden"><p data-i18n="loading">…</p></div>
+          <button id="start" type="button" class="go" data-i18n="cta">SCAN</button>
+        </div>
+        <div class="readout">
+          <p class="label" data-i18n="cookedLabel">Cooked index</p>
+          <p id="score" class="score">0%</p>
+          <div class="bar"><div id="bar-fill"></div></div>
+          <p id="verdict" class="verdict" data-i18n="verdictIdle">—</p>
+          <p id="subverdict" class="subverdict"></p>
+        </div>
+      </section>
+      <section class="feed" id="feed" aria-live="polite"></section>
+    </main>
+
+    <footer data-i18n="disclaimer">disclaimer</footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

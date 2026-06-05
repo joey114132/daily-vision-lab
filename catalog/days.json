@@ -42,6 +42,19 @@
       }
     },
     {
+      "slug": "cooked-scanner",
+      "generator": "cooked-scanner",
+      "title": { "en": "Cooked Scanner", "ko": "요리됨 스캐너" },
+      "tagline": {
+        "en": "Totally unnecessary clinical meme diagnosis from your face.",
+        "ko": "얼굴로 하는 완전 불필요한 임상 밈 진단."
+      },
+      "thesis": {
+        "en": "Meme-driven UX: entertainment value > utility (intentionally).",
+        "ko": "밈 주도 UX: 유틸보다 오락이 목적 (의도적)."
+      }
+    },
+    {
       "slug": "stillness-field",
       "generator": "stillness-field",
       "title": { "en": "Stillness Field", "ko": "고요 장" },

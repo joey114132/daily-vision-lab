@@ -15,12 +15,13 @@
 | 2026-06-04 | [microclimate](./days/2026-06-04-microclimate/) | Microclimate / 2026-06-04-microclimate |
 | 2026-06-05 | [gesture-constellation](./days/2026-06-05-gesture-constellation/) | Gesture Constellation / 제스처 별자리 |
 | 2026-06-06 | [blink-tide](./days/2026-06-06-blink-tide/) | Blink Tide / 깜빡임 조수 |
+| 2026-06-07 | [cooked-scanner](./days/2026-06-07-cooked-scanner/) | Cooked Scanner / 요리됨 스캐너 |
 <!-- DAYS_TABLE_END -->
 
 ## Run today's app / 오늘 앱 실행
 
 ```zsh
-cd days/2026-06-05-gesture-constellation
+cd days/2026-06-06-blink-tide
 npm install
 npm run dev
 ```

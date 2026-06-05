@@ -1,0 +1,214 @@
+:root {
+  --bg: #0c0a00;
+  --lime: #b6ff00;
+  --hot: #ff2d6a;
+  --text: #fffef2;
+  --mono: "IBM Plex Mono", monospace;
+  --display: "Bungee", "Noto Sans KR", sans-serif;
+  --sans: "Noto Sans KR", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--sans);
+  color: var(--text);
+  background: radial-gradient(circle at 20% 0%, #2a1f00, var(--bg) 55%);
+}
+
+.scanlines {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  opacity: 0.07;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    #fff 2px,
+    #fff 4px
+  );
+  z-index: 99;
+}
+
+header, main, footer {
+  position: relative;
+  z-index: 1;
+  padding: 1.25rem clamp(1rem, 4vw, 2.5rem);
+}
+
+.badge {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  color: var(--lime);
+}
+
+h1 {
+  margin: 0.35rem 0 0;
+  font-family: var(--display);
+  font-size: clamp(2rem, 7vw, 3.4rem);
+  color: var(--hot);
+  text-shadow: 3px 3px 0 #000;
+}
+
+.ko {
+  margin: 0.15rem 0;
+  font-weight: 900;
+  color: var(--lime);
+}
+
+.sub { color: rgba(255,255,255,0.7); max-width: 42ch; }
+
+.lang-toggle { display: flex; gap: 0.4rem; margin-top: 0.75rem; }
+.lang-btn {
+  border: 2px solid var(--lime);
+  background: #000;
+  color: var(--lime);
+  border-radius: 0;
+  padding: 0.2rem 0.55rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  cursor: pointer;
+}
+.lang-btn.active { background: var(--lime); color: #000; }
+
+.scan-box {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1rem;
+}
+
+.viewport {
+  position: relative;
+  border: 4px solid var(--lime);
+  box-shadow: 6px 6px 0 var(--hot);
+  overflow: hidden;
+  min-height: 280px;
+}
+
+#video, #overlay {
+  width: 100%;
+  display: block;
+  transform: scaleX(-1);
+}
+
+#overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.go {
+  position: absolute;
+  left: 50%;
+  bottom: 0.75rem;
+  transform: translateX(-50%);
+  border: 0;
+  font-family: var(--display);
+  font-size: 1rem;
+  padding: 0.65rem 1.2rem;
+  background: var(--hot);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #000;
+}
+
+.go.hidden, .loading.hidden { display: none; }
+.loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0,0,0,0.85);
+  font-family: var(--mono);
+}
+
+.readout {
+  border: 4px dashed var(--hot);
+  padding: 1rem;
+  background: rgba(0,0,0,0.45);
+}
+
+.label {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--lime);
+}
+
+.score {
+  margin: 0.2rem 0;
+  font-family: var(--display);
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.bar {
+  height: 14px;
+  border: 2px solid #fff;
+  background: #111;
+}
+
+#bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--lime), var(--hot));
+  transition: width 0.35s steps(6);
+}
+
+.verdict {
+  margin: 0.75rem 0 0.2rem;
+  font-weight: 900;
+  font-size: 1.35rem;
+}
+
+.verdict[data-tier="tierCooked"] { color: var(--hot); }
+.verdict[data-tier="tierGrass"] { color: var(--lime); }
+
+.subverdict {
+  margin: 0;
+  color: rgba(255,255,255,0.65);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+}
+
+.feed {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.meme-card {
+  border-left: 5px solid var(--hot);
+  background: rgba(255,45,106,0.08);
+  padding: 0.65rem 0.85rem;
+  opacity: 0;
+  transform: rotate(-1deg) scale(0.96);
+  transition: 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.meme-card.pop {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+.meme-card time {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--lime);
+}
+
+.meme-card h3 { margin: 0.2rem 0; font-family: var(--display); font-size: 1.1rem; }
+.meme-card p { margin: 0; color: rgba(255,255,255,0.75); font-size: 0.9rem; }
+
+footer {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.5);
+}
+
+@media (max-width: 800px) {
+  .scan-box { grid-template-columns: 1fr; }
+}
