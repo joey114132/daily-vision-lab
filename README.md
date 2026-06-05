@@ -1,7 +1,7 @@
 # Daily Vision Lab / 데일리 비전 랩
 
-**EN:** One niche, passive, vision-AI web experiment per day — bilingual (KO/EN), automated via GitHub Actions.  
-**KO:** 매일 하나씩 — 한영 지원, 패시브 비전 AI 실험. GitHub Actions로 자동 생성·배포.
+**EN:** One niche vision-AI web app per day — **useful, productive, on-device**. Bilingual (KO/EN), automated via GitHub Actions.  
+**KO:** 매일 하나 — **실용·생산성** 중심, 온디바이스 비전 AI. 한영 지원, 자동 생성·배포.
 
 ## Live demo / 라이브 데모
 
@@ -22,7 +22,7 @@
 ## Run today's app / 오늘 앱 실행
 
 ```zsh
-cd days/2026-06-07-cooked-scanner
+cd days/2026-06-08-desk-well
 npm install
 npm run dev
 ```

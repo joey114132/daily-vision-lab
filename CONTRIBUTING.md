@@ -25,6 +25,12 @@ When `#video` and `#overlay` use CSS `transform: scaleX(-1)`:
 4. Mark `TEST_PLAN.md` complete.
 5. Commit (Korean message) and push.
 
+## App direction (from Day 5+)
+
+- **Useful & productive** — desk health, focus, ergonomics, niche tooling.
+- Research thesis required (SitCoach, PosturePlus, JMIR, etc.).
+- Meme/entertainment days are optional one-offs, not the default.
+
 ## Scope guardrails
 
 - ≤ 1 day of work per folder.

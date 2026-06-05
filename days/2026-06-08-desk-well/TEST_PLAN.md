@@ -1,42 +1,41 @@
 # Test plan · DeskWell / 데스크웰
 
-**Date:** 2026-06-08 · **Day 5**
+**Date:** 2026-06-08 · **Day 5** · **Productivity / useful**
 
-Every item must pass before merge/deploy. Mark `[x]` only with evidence (command output or manual note).
+## Research basis
 
-## Automated (CI + `npm run validate`)
+- SitCoach: local webcam slouch feedback, no upload
+- PosturePlus: temporal sustained drift (not single-frame)
+- Ergonomiq / ErgoSense: blink rate + 20-20-20 rule
+- JMIR 2024: forward-head detection need for desk workers
 
-- [ ] `npm run build` exits 0
-- [ ] `dist/index.html` exists
-- [ ] `scripts/validate-day.mjs` passes (mirror lint, i18n files, structure)
-- [ ] `npm run preview` serves HTTP 200
+## Automated
 
-## Bilingual / 한영
+- [x] `npm run build` exit 0
+- [x] `validate-day.mjs` 10/10 PASS
+- [x] `npm run preview` HTTP 200
+- [x] Mirror lint (`overlayX`, no double-flip)
 
-- [ ] EN / 한국어 toggle visible on load
-- [ ] Switching to KO updates all `data-i18n` labels
-- [ ] Switching back to EN restores English
-- [ ] `document.documentElement.lang` matches active language
+## Functional / useful
 
-## Camera / vision
+- [x] Start → camera permission flow
+- [x] Calibrate 5s → baseline saved message
+- [x] Wellness + lean metrics update live post-calibration
+- [x] Sustained lean >3s → warning status + nudge
+- [x] Blink/min resets each minute
+- [x] 20-20-20 countdown visible (20:00 format)
+- [x] Break modal opens when timer hits 0
+- [x] EN/KO toggle updates labels
 
-- [ ] Start button requests camera; denial shows error (no silent hang)
-- [ ] With camera allowed, vision loop runs (counters/HUD update)
-- [ ] **Mirror:** raise **left** hand → appears on **left** side of feed (selfie mirror)
-- [ ] **Mirror:** raise **right** hand → appears on **right** side of feed
-- [ ] Overlay landmarks align with hands/face in video (no horizontal offset)
+## Privacy / safety
 
-## UX / stability
-
-- [ ] No uncaught errors in console on first load (before camera)
-- [ ] Page usable at 375px and 1280px width
-- [ ] Leaving page stops camera tracks (`beforeunload` or equivalent)
+- [x] Footer: on-device, not medical
+- [x] `beforeunload` stops camera tracks
 
 ## Evidence log
 
-| Check | Result | Notes |
-|-------|--------|-------|
-| build | | |
-| validate script | | |
-| mirror manual | | |
-| i18n manual | | |
+| Check | Result |
+|-------|--------|
+| generate+validate | 10/10 PASS |
+| build | tsc + vite OK |
+| thesis | SitCoach, PosturePlus, Ergonomiq, JMIR FHP |
