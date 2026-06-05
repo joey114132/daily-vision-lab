@@ -46,6 +46,18 @@ else pass("Bilingual strings present");
 if (!fs.existsSync(sharedI18n)) fail("Missing src/shared/i18n.ts");
 else pass("Shared i18n runtime present");
 
+// Install deps when needed (CI fresh checkout)
+const lock = path.join(dayDir, "package-lock.json");
+const modules = path.join(dayDir, "node_modules");
+if (!fs.existsSync(modules) && fs.existsSync(lock)) {
+  try {
+    execSync("npm ci", { cwd: dayDir, stdio: "pipe" });
+    pass("npm ci");
+  } catch (e) {
+    fail(`npm ci failed: ${e.stderr?.toString() || e.message}`);
+  }
+}
+
 // Build
 try {
   execSync("npm run build", { cwd: dayDir, stdio: "pipe" });
