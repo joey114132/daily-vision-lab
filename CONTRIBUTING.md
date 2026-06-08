@@ -33,7 +33,8 @@ No generic AI UI. Every app needs one memorable design detail.
 2. Read **frontend-design** skill; write DESIGN.md for the day.
 3. `npm run generate` or scaffold `generators/<slug>/` without MediaPipe.
 4. Manual: EN/KO, core flow, refresh persistence, visual QA at 375px + 1280px.
-5. Commit (Korean) and push.
+5. `npm run verify:dev` — port 5174 serves latest day (kills stale Vite if wrong/down).
+6. Commit (Korean) and push.
 
 ## App direction
 

@@ -10,6 +10,7 @@ Every item must pass before merge/deploy. Mark `[x]` only with evidence.
 - [ ] `dist/index.html` exists
 - [ ] `scripts/validate-day.mjs` passes
 - [ ] `npm run preview` serves HTTP 200
+- [ ] `npm run verify:dev` — localhost:5174 serves this day (after ship)
 
 ## Privacy / 프라이버시
 
