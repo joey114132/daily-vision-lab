@@ -1,17 +1,17 @@
 # Design brief · Scope Box
 
-**Aesthetic direction:** _(fill per day — e.g. editorial ledger, industrial utilitarian)_
+**Aesthetic direction:** Constructivist scope cone — cream field, black ink borders, red wedge, three-slot limit as narrowing triangle.
 
 ## frontend-design checklist
 
-- [ ] **Typography** — distinctive display + body pair (no Inter/Roboto/Space Grotesk)
-- [ ] **Color** — dominant + accent, CSS variables, not purple-gradient slop
-- [ ] **Layout** — intentional asymmetry or strong grid; not generic card stack
-- [ ] **Motion** — staggered load or one high-impact transition; `prefers-reduced-motion`
-- [ ] **Texture** — grain, line, or atmospheric background (not flat white)
-- [ ] **States** — hover, active, empty states polished
-- [ ] **Bilingual** — EN/KO without layout break
+- [x] **Typography** — Bricolage Grotesque (display) + Red Hat Mono + Noto Sans KR
+- [x] **Color** — cream + ink + single red accent; no purple gradients
+- [x] **Layout** — brutalist panel with offset shadow + side stat blocks
+- [x] **Motion** — staggered slot-in, reveal load; `prefers-reduced-motion`
+- [x] **Texture** — grid noise + diagonal red wedge
+- [x] **States** — locked banner, disabled inputs, done strikethrough, toast
+- [x] **Bilingual** — EN/KO toggle; mobile stack at 720px
 
 ## Remember
 
-One unforgettable detail per app (stamp, margin line, ring, etc.).
+Memorable detail: red scope cone above the box — visual metaphor for “only three.”

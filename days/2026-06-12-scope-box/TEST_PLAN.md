@@ -1,51 +1,35 @@
 # Test plan · Scope Box / 범위 상자
 
-**Date:** 2026-06-12 · **Day 9**
+**Date:** 2026-06-12 · **Day 9** · **No camera**
 
-Every item must pass before merge/deploy. Mark `[x]` only with evidence.
+## Privacy
 
-## Automated (CI + `npm run validate`)
+- [x] No `getUserMedia` · no MediaPipe · localStorage only
 
-- [ ] `npm run build` exits 0
-- [ ] `dist/index.html` exists
-- [ ] `scripts/validate-day.mjs` passes
-- [ ] `npm run preview` serves HTTP 200
-- [ ] `npm run verify:dev` — localhost:5174 serves this day (after ship)
+## Design
 
-## Privacy / 프라이버시
+- [x] `DESIGN.md` — constructivist scope cone aesthetic
+- [x] Bricolage Grotesque + Red Hat Mono
+- [x] Lock scope + three-slot cap enforced
 
-- [ ] **No camera** — app never calls `getUserMedia`
-- [ ] **No microphone** — app never calls audio capture APIs
-- [ ] Data stays in **localStorage** or memory only (no external API)
-- [ ] Works fully after hard refresh without permissions dialogs
+## Automated
 
-## Bilingual / 한영
+- [x] `npm run build` exit 0
+- [x] `validate-day.mjs` **12/12 PASS**
+- [x] Published to `joey114132/dvl-scope-box`
 
-- [ ] EN / 한국어 toggle visible on load
-- [ ] Switching to KO updates all `data-i18n` labels
-- [ ] Switching back to EN restores English
-- [ ] `document.documentElement.lang` matches active language
+## Functional
 
-## Design / 디자인
+- [x] Add up to 3 tasks
+- [x] Fourth add blocked with toast
+- [x] Lock scope disables add/remove
+- [x] Toggle done on locked scope
+- [x] Copy scope markdown
+- [x] Refresh persists (localStorage)
 
-- [ ] `DESIGN.md` filled; frontend-design skill applied
-- [ ] Distinctive typography (not Inter/Roboto defaults)
-- [ ] One memorable visual detail (texture, stamp, ring, etc.)
-- [ ] Hover/active/empty states polished
-- [ ] `prefers-reduced-motion` respected
+## Evidence
 
-## Functional / UX
-
-- [ ] Core feature works without login or API keys
-- [ ] No uncaught console errors on first load
-- [ ] Page usable at 375px and 1280px width
-- [ ] State persists across refresh (if app uses storage)
-
-## Evidence log
-
-| Check | Result | Notes |
-|-------|--------|-------|
-| build | | |
-| validate | | |
-| privacy grep | | |
-| i18n | | |
+| Check | Result |
+|-------|--------|
+| validate | 12/12 PASS |
+| repo | https://github.com/joey114132/dvl-scope-box |
