@@ -11,6 +11,8 @@
     "validate:latest": "node scripts/validate-day.mjs $(node scripts/resolve-latest-day.mjs --print-path)",
     "latest-day": "node scripts/resolve-latest-day.mjs --print-path",
     "dev:latest": "node scripts/dev-latest.mjs",
-    "verify:dev": "node scripts/verify-dev-port.mjs"
+    "verify:dev": "node scripts/verify-dev-port.mjs",
+    "publish:day": "node scripts/publish-day-repo.mjs",
+    "publish:all": "node scripts/publish-all-days.mjs"
   }
 }

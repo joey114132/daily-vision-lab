@@ -21,8 +21,12 @@ jobs:
 
       - name: Generate next day app
         run: node scripts/generate-next-day.mjs
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT || github.token }}
 
-      - name: Commit and push
+      - name: Commit and push studio hub
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT || github.token }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

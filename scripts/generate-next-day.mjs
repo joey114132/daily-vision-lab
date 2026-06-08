@@ -150,6 +150,7 @@ progress.lastGenerated = { date, folder: folderName, index };
 fs.writeFileSync(progressPath, JSON.stringify(progress, null, 2) + "\n");
 
 execSync("node scripts/update-root-readme.mjs", { cwd: root, stdio: "inherit" });
+execSync(`node scripts/publish-day-repo.mjs "${dest}"`, { cwd: root, stdio: "inherit" });
 
 const commitSubject = `Day ${dayNum}: ${entry.title.ko} / ${entry.title.en}`;
 const commitBody = `${entry.tagline.ko}\n\n${entry.tagline.en}\n\nThesis KO: ${entry.thesis.ko}\nThesis EN: ${entry.thesis.en}`;

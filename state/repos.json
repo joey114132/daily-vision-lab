@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "apps": {
+    "breath-cadence": {
+      "date": "2026-06-11",
+      "folder": "2026-06-11-breath-cadence",
+      "repo": "joey114132/dvl-breath-cadence",
+      "repoUrl": "https://github.com/joey114132/dvl-breath-cadence",
+      "pagesUrl": "https://joey114132.github.io/dvl-breath-cadence/",
+      "titleEn": "Breath Cadence",
+      "titleKo": "호흡 박자",
+      "publishedAt": "2026-06-08T06:18:04.837Z"
+    },
+    "microclimate": {
+      "date": "2026-06-04",
+      "folder": "2026-06-04-microclimate",
+      "repo": "joey114132/dvl-microclimate",
+      "repoUrl": "https://github.com/joey114132/dvl-microclimate",
+      "pagesUrl": "https://joey114132.github.io/dvl-microclimate/",
+      "titleEn": "Microclimate",
+      "titleKo": "Sit still. Your face becomes the forecast.",
+      "publishedAt": "2026-06-08T06:18:48.861Z"
+    },
+    "gesture-constellation": {
+      "date": "2026-06-05",
+      "folder": "2026-06-05-gesture-constellation",
+      "repo": "joey114132/dvl-gesture-constellation",
+      "repoUrl": "https://github.com/joey114132/dvl-gesture-constellation",
+      "pagesUrl": "https://joey114132.github.io/dvl-gesture-constellation/",
+      "titleEn": "Gesture Constellation",
+      "titleKo": "제스처 별자리",
+      "publishedAt": "2026-06-08T06:18:59.287Z"
+    },
+    "blink-tide": {
+      "date": "2026-06-06",
+      "folder": "2026-06-06-blink-tide",
+      "repo": "joey114132/dvl-blink-tide",
+      "repoUrl": "https://github.com/joey114132/dvl-blink-tide",
+      "pagesUrl": "https://joey114132.github.io/dvl-blink-tide/",
+      "titleEn": "Blink Tide",
+      "titleKo": "깜빡임 조수",
+      "publishedAt": "2026-06-08T06:19:09.287Z"
+    },
+    "cooked-scanner": {
+      "date": "2026-06-07",
+      "folder": "2026-06-07-cooked-scanner",
+      "repo": "joey114132/dvl-cooked-scanner",
+      "repoUrl": "https://github.com/joey114132/dvl-cooked-scanner",
+      "pagesUrl": "https://joey114132.github.io/dvl-cooked-scanner/",
+      "titleEn": "Cooked Scanner",
+      "titleKo": "요리됨 스캐너",
+      "publishedAt": "2026-06-08T06:19:19.605Z"
+    },
+    "desk-well": {
+      "date": "2026-06-08",
+      "folder": "2026-06-08-desk-well",
+      "repo": "joey114132/dvl-desk-well",
+      "repoUrl": "https://github.com/joey114132/dvl-desk-well",
+      "pagesUrl": "https://joey114132.github.io/dvl-desk-well/",
+      "titleEn": "DeskWell",
+      "titleKo": "데스크웰",
+      "publishedAt": "2026-06-08T06:19:29.579Z"
+    },
+    "focus-ledger": {
+      "date": "2026-06-09",
+      "folder": "2026-06-09-focus-ledger",
+      "repo": "joey114132/dvl-focus-ledger",
+      "repoUrl": "https://github.com/joey114132/dvl-focus-ledger",
+      "pagesUrl": "https://joey114132.github.io/dvl-focus-ledger/",
+      "titleEn": "Focus Ledger",
+      "titleKo": "포커스 원장",
+      "publishedAt": "2026-06-08T06:19:39.547Z"
+    },
+    "margin-notes": {
+      "date": "2026-06-10",
+      "folder": "2026-06-10-margin-notes",
+      "repo": "joey114132/dvl-margin-notes",
+      "repoUrl": "https://github.com/joey114132/dvl-margin-notes",
+      "pagesUrl": "https://joey114132.github.io/dvl-margin-notes/",
+      "titleEn": "Margin Notes",
+      "titleKo": "여백 메모",
+      "publishedAt": "2026-06-08T06:19:49.272Z"
+    }
+  }
+}
