@@ -80,6 +80,16 @@
       "titleEn": "Margin Notes",
       "titleKo": "여백 메모",
       "publishedAt": "2026-06-08T06:19:49.272Z"
+    },
+    "scope-box": {
+      "date": "2026-06-12",
+      "folder": "2026-06-12-scope-box",
+      "repo": "joey114132/dvl-scope-box",
+      "repoUrl": "https://github.com/joey114132/dvl-scope-box",
+      "pagesUrl": "https://joey114132.github.io/dvl-scope-box/",
+      "titleEn": "Scope Box",
+      "titleKo": "범위 상자",
+      "publishedAt": "2026-06-08T06:34:40.395Z"
     }
   }
 }

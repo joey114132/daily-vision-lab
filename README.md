@@ -5,7 +5,7 @@
 
 ## Live demo / 라이브 데모
 
-**[Breath Cadence](https://joey114132.github.io/dvl-breath-cadence/)** — latest standalone app.
+**[Scope Box](https://joey114132.github.io/dvl-scope-box/)** — latest standalone app.
 
 ## Days / 일차 목록
 
@@ -20,6 +20,7 @@
 | 2026-06-09 | Focus Ledger / 포커스 원장 | [joey114132/dvl-focus-ledger](https://github.com/joey114132/dvl-focus-ledger) | [demo](https://joey114132.github.io/dvl-focus-ledger/) | [source](./days/2026-06-09-focus-ledger/) |
 | 2026-06-10 | Margin Notes / 여백 메모 | [joey114132/dvl-margin-notes](https://github.com/joey114132/dvl-margin-notes) | [demo](https://joey114132.github.io/dvl-margin-notes/) | [source](./days/2026-06-10-margin-notes/) |
 | 2026-06-11 | Breath Cadence / 호흡 박자 | [joey114132/dvl-breath-cadence](https://github.com/joey114132/dvl-breath-cadence) | [demo](https://joey114132.github.io/dvl-breath-cadence/) | [source](./days/2026-06-11-breath-cadence/) |
+| 2026-06-12 | Scope Box / 범위 상자 | [joey114132/dvl-scope-box](https://github.com/joey114132/dvl-scope-box) | [demo](https://joey114132.github.io/dvl-scope-box/) | [source](./days/2026-06-12-scope-box/) |
 <!-- DAYS_TABLE_END -->
 
 ## Run today's app / 오늘 앱 실행

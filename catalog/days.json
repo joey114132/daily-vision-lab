@@ -107,6 +107,19 @@
       }
     },
     {
+      "slug": "scope-box",
+      "generator": "scope-box",
+      "title": { "en": "Scope Box", "ko": "범위 상자" },
+      "tagline": {
+        "en": "Three tasks max today — lock scope before you drift.",
+        "ko": "오늘은 세 가지만 — 벗어나기 전에 범위를 잠그세요."
+      },
+      "thesis": {
+        "en": "Cognitive load theory: constraining active goals reduces switch cost (Sweller 2011, local-first planning).",
+        "ko": "인지 부하 이론: 활성 목표를 제한하면 전환 비용이 줄어듭니다 (Sweller 2011)."
+      }
+    },
+    {
       "slug": "stillness-field",
       "generator": "stillness-field",
       "skipAuto": true,

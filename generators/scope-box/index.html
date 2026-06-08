@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="__TITLE_EN__ — three tasks max, lock your scope" />
+    <title>__TITLE_EN__ · Day __DAY_NUM__</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Red+Hat+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body data-locked="false">
+    <div class="wedge" aria-hidden="true"></div>
+    <div class="grid-noise" aria-hidden="true"></div>
+
+    <header class="mast reveal">
+      <div>
+        <p class="eyebrow" data-i18n="brandTag">daily vision lab</p>
+        <h1>__TITLE_EN__</h1>
+        <p class="ko">__TITLE_KO__</p>
+        <p class="lede" data-i18n="lede">tagline</p>
+      </div>
+      <div class="mast-tools">
+        <div id="lang-toggle" class="lang-toggle"></div>
+        <p class="stamp" data-i18n="privacyShort">local only</p>
+      </div>
+    </header>
+
+    <main class="stage reveal" style="--d: 0.1s">
+      <section class="cone-panel">
+        <div class="cone" aria-hidden="true">
+          <span class="cone-line l1"></span>
+          <span class="cone-line l2"></span>
+          <span class="cone-line l3"></span>
+        </div>
+        <div class="panel-head">
+          <h2 data-i18n="slotsTitle">Today's scope</h2>
+          <p id="slot-meter" class="slot-meter">0 / 3</p>
+        </div>
+        <p id="locked-banner" class="locked-banner hidden" data-i18n="lockedBanner">locked</p>
+        <ul id="slots" class="slots"></ul>
+        <form id="add-form" class="add-form">
+          <input
+            id="task-input"
+            type="text"
+            maxlength="80"
+            data-i18n-placeholder="inputPlaceholder"
+            placeholder="One scoped task"
+          />
+          <button type="submit" class="btn-add" data-i18n="btnAdd">Add</button>
+        </form>
+        <div class="actions">
+          <button id="lock" type="button" class="btn-lock" data-i18n="btnLock">Lock scope</button>
+          <button id="copy" type="button" class="btn-ghost" data-i18n="btnCopy">Copy</button>
+        </div>
+      </section>
+
+      <aside class="stats reveal" style="--d: 0.18s">
+        <article>
+          <span data-i18n="statDone">Done</span>
+          <strong id="stat-done">0</strong>
+        </article>
+        <article>
+          <span data-i18n="statSlots">Slots</span>
+          <strong id="stat-slots">0/3</strong>
+        </article>
+      </aside>
+    </main>
+
+    <footer class="reveal" style="--d: 0.26s" data-i18n="privacyNote">privacy</footer>
+    <p id="toast" class="toast hidden" role="status"></p>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
