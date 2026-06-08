@@ -19,6 +19,7 @@
 | 2026-06-08 | [desk-well](./days/2026-06-08-desk-well/) | DeskWell / 데스크웰 |
 | 2026-06-09 | [focus-ledger](./days/2026-06-09-focus-ledger/) | Focus Ledger / 포커스 원장 |
 | 2026-06-10 | [margin-notes](./days/2026-06-10-margin-notes/) | Margin Notes / 여백 메모 |
+| 2026-06-11 | [breath-cadence](./days/2026-06-11-breath-cadence/) | Breath Cadence / 호흡 박자 |
 <!-- DAYS_TABLE_END -->
 
 ## Run today's app / 오늘 앱 실행

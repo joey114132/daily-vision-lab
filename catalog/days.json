@@ -94,6 +94,19 @@
       }
     },
     {
+      "slug": "breath-cadence",
+      "generator": "breath-cadence",
+      "title": { "en": "Breath Cadence", "ko": "호흡 박자" },
+      "tagline": {
+        "en": "Box breathing between tasks — visual rhythm, no mic, local only.",
+        "ko": "작업 사이 박스 호흡 — 시각적 리듬, 마이크 없음, 로컬만."
+      },
+      "thesis": {
+        "en": "Physiological sigh patterns reduce arousal between deep-work blocks (Huberman 2023, privacy-first desk wellness).",
+        "ko": "생리적 호흡 패턴이 딥워크 블록 사이 각성을 낮춥니다 (Huberman 2023, 프라이버시 데스크 웰니스)."
+      }
+    },
+    {
       "slug": "stillness-field",
       "generator": "stillness-field",
       "skipAuto": true,
